@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CustomEnums.h"
 #include "CustomStructs.generated.h"
 
 /**
@@ -31,7 +32,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool CanEquip;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName EquipType;
+	EWeaponType EquipType;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 Count;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
