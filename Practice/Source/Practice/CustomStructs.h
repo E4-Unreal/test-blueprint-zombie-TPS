@@ -38,3 +38,37 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MaxCount;
 };
+
+USTRUCT(Atomic, BlueprintType)
+struct FDeathInfoStruct
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AController* Instigator;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> KilledClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Damage;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 AttackCount;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 HeadShot;
+};
+
+USTRUCT(Atomic, BlueprintType)
+struct FPlayRecordStruct
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AController* Instigator;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int KillCount;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Damage;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 AttackCount;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 HeadShot;
+};
